@@ -9,7 +9,7 @@ export default defineConfig({
   },
   reporter: "html",
   use: {
-    browserName: "webkit",
+    browserName: "chromium",
     headless: true,
   },
 });
