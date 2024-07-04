@@ -43,7 +43,7 @@ test("UI Controls", async ({ page }) => {
   await expect(documentLink).toHaveAttribute("class", "blinkingText");
 });
 
-test("@Child windows handle", async ({ browser }) => {
+test.only("@Child windows handle", async ({ browser }) => {
   const context = await browser.newContext();
   const page = await context.newPage();
   const userName = page.locator("#username");
