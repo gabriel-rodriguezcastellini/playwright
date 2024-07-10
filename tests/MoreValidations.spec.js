@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test("Popup validations", async ({ page }) => {
+test.only("Popup validations", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
   await expect(page.locator("#displayed-text")).toBeVisible();
   await page.locator("#hide-textbox").click();
@@ -25,7 +25,7 @@ test("Screenshot & Visual comparison", async ({ page }) => {
   await expect(page.locator("#displayed-text")).toBeHidden();
 });
 
-test.only("visual", async ({ page }) => {
+test("visual", async ({ page }) => {
   await page.goto("https://www.google.com/");
   expect(await page.screenshot()).toMatchSnapshot("landing.png");
 });
